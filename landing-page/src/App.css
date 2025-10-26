@@ -63,7 +63,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("images/desktop.png");
+  background-image: url("/images/hero-desktop.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -382,7 +382,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("images/mobile.png");
+    background-image: url("/images/mobile.png");
     height: 70vh;
     letter-spacing: 4px;
   }
