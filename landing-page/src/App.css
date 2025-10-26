@@ -60,7 +60,10 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("images/desktop.png") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/images/hero-desktop.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -376,7 +379,10 @@
   }
 
   .header-container {
-    background: url("images/mobile.png") center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/images/mobile.png");
     height: 70vh;
     letter-spacing: 4px;
   }
