@@ -1,42 +1,418 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+.navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: transparent;
+}
+
+.navbar-container img {
+  max-width: 170px;
+  cursor: pointer;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu {
+  max-width: 2rem !important;
+  border: none;
+  background: transparent;
+  display: none;
+  height: 18px;
+}
+
+.navbar li a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.13px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #fff;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+
+.navbar li a:active {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
+}
+
+.header-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("images/desktop.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Fraunces", serif;
+  letter-spacing: 6px;
+  padding-top: 6rem;
+}
+
+.header-container h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.services-container h2 {
+  font-family: 'Fraunces';
+  color: rgba(36, 48, 62, 1);
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.29px;
+  margin-bottom: 1.5rem;
+}
+
+.services-container p {
+  font-family: "Barlow";
+  color: rgba(128, 131, 151, 1);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.13px;
+  margin-bottom: 1.5rem;
+  max-width: 450px;
+}
+
+.services-container a {
+  color: rgba(36, 48, 62, 1);
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 4px solid rgba(250, 212, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+.services-container a:hover {
+  border-color: rgba(250, 212, 0, 1);
+}
+
+.with-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
   padding: 2rem;
+}
+
+.features-container h2 {
+  color: rgba(5, 44, 59, 1);
+  margin-bottom: 27px;
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.2px;
+  margin-bottom: 1rem;
+  max-width: 445px;
+}
+
+.features-container p {
+  color: rgba(25, 83, 108, 1);
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.11px;
+  text-align: center;
+  max-width: 445px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 8rem 2rem;
+  background-color: #fffbf8;
+}
+
+.testimonials-container h1 {
+  font-family: 'Fraunces';
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(167, 170, 173, 1);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.client-container {
+  max-width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.client-container img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-container p {
+  color: rgba(91, 99, 109, 1);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: -0.13px;
+}
+
+.client-container .bold {
+  color: rgba(36, 48, 62, 1);
+  font-family: 'Fraunces';
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.client-container small {
+  color: rgba(167, 170, 173, 1);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: -0.1px;
+}
+
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-container img {
+  width: 100%;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: rgba(144, 212, 198, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.footer {
+  max-width: 297px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.footer-services {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer-services a {
+  color: rgba(69, 141, 126, 1);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+  text-decoration: none;
+  font-family: 'Barlow', sans-serif;
+}
+
+.footer-services a:hover {
+  color: white;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icons-container a {
+  color: #2C7566;
+}
+
+.icons-container a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: 5rem 1.5rem;
+    gap: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .client-container p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .footer-services {
+    gap: 1.2rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 1024px) {
+  .header-container h1 {
+    font-size: 2.5rem;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media (max-width: 656px) {
+  .navbar-container {
+    padding: 1rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  .navbar-container img {
+    max-width: 130px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 252, 248, 1);
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .navbar.active li a {
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.14px;
+    color: rgba(128, 131, 151, 1);
+  }
+
+  .navbar.active li a:hover {
+    color: rgba(36, 48, 62, 1);
+    background-color: rgba(251, 214, 0, 1);
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .header-container {
+    background: url("images/mobile.png") center/cover no-repeat;
+    height: 70vh;
+    letter-spacing: 4px;
+  }
+
+  .header-container h1 {
+    font-size: 2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(400px, 1fr));
+  }
+
+  .grid-container> :nth-child(2) {
+    order: -1;
+  }
+
+  .services-container {
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .services-container p {
+    margin: 0 auto 1.5rem;
+  }
+
+  /* .with-image,
+  .features-container {
+    min-height: 400px;
+  } */
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
